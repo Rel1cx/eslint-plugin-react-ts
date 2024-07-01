@@ -1,0 +1,45 @@
+# no-mixing-controlled-and-uncontrolled
+
+## Rule category
+
+Correctness.
+
+## What it does
+
+Prevents both `value` and `defaultValue` prop or both `checked` and `defaultChecked` prop on `<input />`.
+
+## Why is this bad?
+
+A `<input />` is either controlled or uncontrolled. Mixing controlled and uncontrolled props can lead to bugs and unexpected behavior.
+
+## Examples
+
+### Failing
+
+```tsx twoslash
+import React from "react";
+
+function Example() {
+  return <input value="1" defaultValue="2" />;
+  //     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  //     - Disallow controlled prop and uncontrolled prop being used together.
+}
+```
+
+### Passing
+
+```tsx twoslash
+import React from "react";
+
+function Example1() {
+  return <input value="1" />;
+}
+
+function Example2() {
+  return <input defaultValue="1" />;
+}
+```
+
+## Further Reading
+
+- [react.dev: Controlled and uncontrolled components](https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components)

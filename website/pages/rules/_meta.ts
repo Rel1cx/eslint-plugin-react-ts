@@ -33,6 +33,7 @@ export default {
   "no-leaked-conditional-rendering": "no-leaked-conditional-rendering",
   "no-missing-component-display-name": "no-missing-component-display-name",
   "no-missing-key": "no-missing-key",
+  "no-mixing-controlled-and-uncontrolled": "no-mixing-controlled-and-uncontrolled",
   "no-nested-components": "no-nested-components",
   "no-redundant-should-component-update": "no-redundant-should-component-update",
   "no-set-state-in-component-did-mount": "no-set-state-in-component-did-mount",
